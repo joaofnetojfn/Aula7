@@ -52,14 +52,14 @@ public class MainActivity extends AppCompatActivity {
                             str.substring(6, 9)+'-'+
                             str.substring(9);
                     // Se tem mais de 3, coloca só o ponto
-                } else if (str.length() > 3) {
-                    str = str.substring(0, 3) + '.' +
-                            str.substring(3);
-                    //Se tem mais de 6, coloca só o ponto
-                }else if(str.length() > 6){
+                } else if (str.length() > 6) {
                     str = str.substring(0, 3) + '.' +
                             str.substring(3, 6) + '.' +
                             str.substring(6);
+                    //Se tem mais de 6, coloca só o ponto
+                }else if(str.length() > 3){
+                    str = str.substring(0, 3) + '.' +
+                            str.substring(3);
                 }
                 // Seta a flag para evitar chamada infinita
                 atualizando = true;
